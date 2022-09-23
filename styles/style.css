@@ -1,12 +1,50 @@
 @font-face {
-    font-family: "AppliMincho";
-    src: url("../src/appliMincho.otf");
+    font-family: "JuliusSansOne";
+    src: url("../src/JuliusSansOne-Regular.ttf");
 }
 
-body{
+body {
     margin: 0;
-    padding: 0;
-    background-color: rgb(20,20,30);
+    padding: 128px;
+    background-color: rgb(20, 20, 30);
     color: whitesmoke;
-    font-family: "AppliMincho","serif";
+    font-family: "JuliusSansOne", "serif";
+    background-image: url("../src/tidal\ wreck.png");
+    text-align: center;
+    font-size: 2em;
+}
+
+button {
+    font-family: "JuliusSansOne", sans-serif;
+    position: relative;
+    transition: 0.2s;
+    color: whitesmoke;
+    /* background-color: #36393f; */
+    background-color: whitesmoke;
+    margin: 4px;
+    box-sizing: border-box;
+    line-height: 60px;
+    font-size: 2em;
+    padding: 4px;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    border: none;
+}
+
+button:hover {
+    background-color: #1189da;
+}
+
+button::before {
+    z-index: -1;
+    position: absolute;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    /* background-color: whitesmoke; */
+    background-color: #36393f;
+    margin: 4px;
+
+    content: "";
 }
